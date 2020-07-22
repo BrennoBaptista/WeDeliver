@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoFac" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WeDeliver.Aplicacao\WeDeliver.Aplicacao.csproj" />
+    <ProjectReference Include="..\WeDeliver.Dominio.Servico\WeDeliver.Dominio.Servico.csproj" />
+    <ProjectReference Include="..\WeDeliver.Infraestrutura.Persistencia\WeDeliver.Infraestrutura.Persistencia.csproj" />
+  </ItemGroup>
+
+</Project>

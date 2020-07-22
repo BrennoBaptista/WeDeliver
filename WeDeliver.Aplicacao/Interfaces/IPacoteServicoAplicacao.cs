@@ -8,9 +8,9 @@ namespace WeDeliver.Aplicacao.Interfaces
 {
     public interface IPacoteServicoAplicacao : IBaseServicoAplicacao<Pacote>
     {
-        Cliente DetalharPorRemetente(string busca);
-        Cliente DetalharPorDestinatario(string busca);
-        Progresso DetalharPorProgresso(string busca);
-        Envio DetalharPorTipoEnvio(string busca);
+        Pacote DetalharPorRemetente(string busca);
+        Pacote DetalharPorDestinatario(string busca);
+        Pacote DetalharPorProgresso(string busca);
+        Pacote DetalharPorTipoEnvio(string busca);
     }
 }

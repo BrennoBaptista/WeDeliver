@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WeDeliver.Aplicacao.DTO\WeDeliver.Aplicacao.DTO.csproj" />
+    <ProjectReference Include="..\WeDeliver.Dominio\WeDeliver.Dominio.csproj" />
+  </ItemGroup>
+
+</Project>

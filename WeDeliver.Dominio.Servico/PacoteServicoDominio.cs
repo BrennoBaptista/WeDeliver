@@ -17,22 +17,22 @@ namespace WeDeliver.Dominio.Servico
             _pacoteRepositorio = pacoteRepositorio;
         }
 
-        public Cliente DetalharPorDestinatario(string busca)
+        public Pacote DetalharPorDestinatario(string busca)
         {
             return _pacoteRepositorio.DetalharPorDestinatario(busca);
         }
 
-        public Progresso DetalharPorProgresso(string busca)
+        public Pacote DetalharPorProgresso(string busca)
         {
             return _pacoteRepositorio.DetalharPorProgresso(busca);
         }
 
-        public Cliente DetalharPorRemetente(string busca)
+        public Pacote DetalharPorRemetente(string busca)
         {
             return _pacoteRepositorio.DetalharPorRemetente(busca);
         }
 
-        public Envio DetalharPorTipoEnvio(string busca)
+        public Pacote DetalharPorTipoEnvio(string busca)
         {
             return _pacoteRepositorio.DetalharPorTipoEnvio(busca);
         }

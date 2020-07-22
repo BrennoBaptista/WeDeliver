@@ -7,6 +7,9 @@ namespace WeDeliver.Dominio.Entidades
 {
     public class Pacote : BaseEntidade
     {
+        public Guid IdCliente { get; set; }
+        public Guid IdPacote { get; set; }
+
         public Cliente Remetente { get; set; }
         public Cliente Destinatario { get; set; }
         public Progresso Status { get; set; }

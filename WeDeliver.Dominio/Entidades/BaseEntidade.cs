@@ -1,11 +1,14 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace WeDeliver.Dominio.Entidades
 {
     public class BaseEntidade
     {
-        public Guid Id { get; protected set; }
-        public DateTime DataCriacao { get; protected set; }
+        [Key]
+        public Guid Id { get; set; }
+
+        public DateTime DataCriacao { get; set; }
         public DateTime DataModificacao { get; set; }
 
         public BaseEntidade()
