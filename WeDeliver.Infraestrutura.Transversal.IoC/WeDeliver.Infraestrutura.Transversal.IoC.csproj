@@ -12,6 +12,7 @@
     <ProjectReference Include="..\WeDeliver.Aplicacao\WeDeliver.Aplicacao.csproj" />
     <ProjectReference Include="..\WeDeliver.Dominio.Servico\WeDeliver.Dominio.Servico.csproj" />
     <ProjectReference Include="..\WeDeliver.Infraestrutura.Persistencia\WeDeliver.Infraestrutura.Persistencia.csproj" />
+    <ProjectReference Include="..\WeDeliver.Infraestrutura.Transversal.AutoMapper\WeDeliver.Infraestrutura.Transversal.AutoMapper.csproj" />
   </ItemGroup>
 
 </Project>

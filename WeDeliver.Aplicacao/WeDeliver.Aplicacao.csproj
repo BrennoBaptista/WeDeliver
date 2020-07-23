@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WeDeliver.Dominio\WeDeliver.Dominio.csproj" />
+    <ProjectReference Include="..\WeDeliver.Infraestrutura.Transversal.AutoMapper\WeDeliver.Infraestrutura.Transversal.AutoMapper.csproj" />
   </ItemGroup>
 
 </Project>

@@ -9,45 +9,45 @@ using WeDeliver.Aplicacao.Interfaces;
 
 namespace WeDeliver.MVC.Controllers
 {
-    public class ClienteController : Controller
+    public class PacoteController : Controller
     {
-        private readonly IClienteServicoAplicacao _clienteServicoAplicacao;
+        private readonly IPacoteServicoAplicacao _pacoteServicoAplicacao;
 
-        public ClienteController(IClienteServicoAplicacao clienteServicoAplicacao)
+        public PacoteController(IPacoteServicoAplicacao pacoteServicoAplicacao)
         {
-            _clienteServicoAplicacao = clienteServicoAplicacao;
+            _pacoteServicoAplicacao = pacoteServicoAplicacao;
         }
 
-        // GET: Cliente
+        // GET: Pacote
         public ActionResult Index()
         {
-            return View(_clienteServicoAplicacao.Listar());
+            return View(_pacoteServicoAplicacao.Listar());
         }
 
-        // GET: Cliente/Details/5
+        // GET: Pacote/Details/5
         public ActionResult Details(Guid id)
         {
-            return View(_clienteServicoAplicacao.DetalharId(id));
+            return View(_pacoteServicoAplicacao.DetalharId(id));
         }
 
-        // GET: Cliente/Create
+        // GET: Pacote/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Cliente/Create
+        // POST: Pacote/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(ClienteDTO clienteDTO)
+        public ActionResult Create(PacoteDTO pacoteDTO)
         {
             try
             {
                 try
                 {
-                    _clienteServicoAplicacao.Adicionar(clienteDTO);
+                    _pacoteServicoAplicacao.Adicionar(pacoteDTO);
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     throw e;
                 }
@@ -60,22 +60,22 @@ namespace WeDeliver.MVC.Controllers
             }
         }
 
-        // GET: Cliente/Edit/5
+        // GET: Pacote/Edit/5
         public ActionResult Edit(Guid id)
         {
             return View();
         }
 
-        // POST: Cliente/Edit/5
+        // POST: Pacote/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(ClienteDTO clienteDTO)
+        public ActionResult Edit(PacoteDTO pacoteDTO)
         {
             try
             {
                 try
                 {
-                    _clienteServicoAplicacao.Atualizar(clienteDTO);
+                    _pacoteServicoAplicacao.Atualizar(pacoteDTO);
                 }
                 catch (Exception e)
                 {
@@ -90,27 +90,28 @@ namespace WeDeliver.MVC.Controllers
             }
         }
 
-        // GET: Cliente/Delete/5
+        // GET: Pacote/Delete/5
         public ActionResult Delete(Guid id)
         {
             return View();
         }
 
-        // POST: Cliente/Delete/5
+        // POST: Pacote/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(ClienteDTO clienteDTO)
+        public ActionResult Delete(PacoteDTO pacoteDTO)
         {
             try
             {
                 try
                 {
-                    _clienteServicoAplicacao.Excluir(clienteDTO);
+                    _pacoteServicoAplicacao.Excluir(pacoteDTO);
                 }
                 catch (Exception e)
                 {
                     throw e;
                 }
+
                 return RedirectToAction(nameof(Index));
             }
             catch

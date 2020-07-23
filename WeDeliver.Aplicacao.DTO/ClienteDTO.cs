@@ -1,4 +1,5 @@
 ﻿using System;
+using WeDeliver.Dominio.Entidades.Objetos_de_valor;
 
 namespace WeDeliver.Aplicacao.DTO
 {
@@ -8,6 +9,5 @@ namespace WeDeliver.Aplicacao.DTO
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public string Email { get; set; }
-
     }
 }

@@ -32,7 +32,7 @@ namespace WeDeliver.Dominio.Entidades
         public Documento Documento { get; set; }
         public Endereco Endereco { get; set; }
 
-        public ICollection<Pacote> Pacotes { get; set; }
+        public List<Pacote> Pacotes { get; set; }// = new List<Pacote>();
 
         public Cliente() { Iniciar(); }
 

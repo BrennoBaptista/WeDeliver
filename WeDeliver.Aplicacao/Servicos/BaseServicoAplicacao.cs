@@ -25,7 +25,7 @@ namespace WeDeliver.Aplicacao.Servicos
             _servicoDominio.Atualizar(obj);
         }
 
-        public T DetalharId(int id)
+        public T DetalharId(Guid id)
         {
             return _servicoDominio.DetalharId(id);
         }

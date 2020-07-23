@@ -42,7 +42,7 @@ namespace WeDeliver.Infraestrutura.Persistencia.Repositorio
             }
         }
 
-        public T DetalharId(int id)
+        public T DetalharId(Guid id)
         {
             return _contexto.Set<T>().Find(id);
         }

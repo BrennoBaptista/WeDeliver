@@ -6,6 +6,7 @@ using WeDeliver.Dominio.Interfaces.Repositorios;
 using WeDeliver.Dominio.Interfaces.Servicos;
 using WeDeliver.Dominio.Servico;
 using WeDeliver.Infraestrutura.Persistencia.Repositorio;
+using WeDeliver.Infraestrutura.Transversal.AutoMapper;
 
 namespace WeDeliver.Infraestrutura.Transversal.IoC
 {
@@ -25,7 +26,9 @@ namespace WeDeliver.Infraestrutura.Transversal.IoC
             builder.RegisterType<PacoteRepositorio>().As<IPacoteRepositorio>();
             builder.RegisterType<ObjetoRepositorio>().As<IObjetoRepositorio>();
 
-
+            builder.RegisterType<MapperCliente>().As<IMapperCliente>();
+            builder.RegisterType<MapperPacote>().As<IMapperPacote>();
+            builder.RegisterType<MapperObjeto>().As<IMapperObjeto>();
         }
 
     }
