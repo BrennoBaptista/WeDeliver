@@ -9,9 +9,7 @@ namespace WeDeliver.Infraestrutura.Persistencia
     public class WeDeliverDbContext : DbContext
     {
         public WeDeliverDbContext() { }
-
         public WeDeliverDbContext(DbContextOptions<WeDeliverDbContext> options) : base(options) { }
-
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Pacote> Pacotes { get; set; }
         public DbSet<Objeto> Objetos { get; set; }
@@ -49,11 +47,10 @@ namespace WeDeliver.Infraestrutura.Persistencia
                 if (entry.State == EntityState.Modified)
                 {
                     entry.Property("DataCriacao").IsModified = false;
+                    entry.Property("DataModificacao").CurrentValue = DateTime.Now;
                 }
             }
-
             return base.SaveChanges();
         }
-
     }
 }

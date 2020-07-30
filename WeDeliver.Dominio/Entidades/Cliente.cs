@@ -9,42 +9,23 @@ namespace WeDeliver.Dominio.Entidades
 {
     public class Cliente : BaseEntidade
     {
-        [Required(ErrorMessage = "Campo Obrigatório")]
-        [DataType(DataType.Text)]
-        [MinLength(3), MaxLength(20)]
         public string Nome { get; set; }
-
-        [Required(ErrorMessage = "Campo Obrigatório")]
-        [DataType(DataType.Text)]
-        [MinLength(3), MaxLength(20)]
         public string Sobrenome { get; set; }
-
-        [Required(ErrorMessage = "Campo Obrigatório")]
-        [DataType(DataType.Text)]
-        [MinLength(3), MaxLength(20)]
         public string Email { get; set; }
-
-        [Required(ErrorMessage = "Campo Obrigatório")]
-        [DataType(DataType.Text)]
-        [MinLength(3), MaxLength(12)]
         public string Telefone { get; set; }
-
         public Documento Documento { get; set; }
         public Endereco Endereco { get; set; }
-
         public List<Pacote> Pacotes { get; set; }// = new List<Pacote>();
 
         public Cliente() { Iniciar(); }
 
-        public Cliente(string nome, string sobrenome, string email, string telefone, Documento documento, Endereco endereco)
+        public Cliente(string nome, string sobrenome, string email, string telefone)
         {
             Iniciar();
             Nome = nome;
             Sobrenome = sobrenome;
             Email = email;
             Telefone = telefone;
-            Documento = documento;
-            Endereco = endereco;
         }
     }
 }
